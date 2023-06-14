@@ -6,16 +6,16 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<button
+<!-- <button
   (click)="buttonOnClick()"
   class="text-center shadow-lg justify-center text-gray-600 bg-white font-medium rounded-lg text-sm px-5 py-2.5 m-10 hover:bg-slate-400">
   <div *ngIf="!showText">Show Text</div>
   <div *ngIf="showText">Hide Text</div>
 </button>
 
-    <p *ngIf="showText">{{title}}</p>
+    <p *ngIf="showText">{{title}}</p> -->
 
-<div class="flex flex-col min-h-full justify-center ">
+<!-- <div class="flex flex-col min-h-full justify-center ">
     <div class="mt-10 sm:mx-auto">
       <form class="space-y-6" action="#" method="POST">
         <div>
@@ -34,20 +34,87 @@
               class="border-0 w-full rounded-md ring-inset sm:leading-6 shadow-sm">
           </div>
 
+            <label
+              for="password"
+              class="leading-6 block text-sm font-medium to-gray-900">
+              Password
+            </label>
+            <div class="mt-2">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                [(ngModel)]="password"
+                required
+                class="border-0 w-full rounded-md ring-inset sm:leading-6 shadow-sm">
+            </div>
+        </div>
+      </form>
+    </div>
+
+</div> -->
+
+<!-- <router-outlet></router-outlet> -->
+
+  <form action="#" method="post">
+
+    <div class="flex justify-center min-h-full items-center">
+      <div class="flex flex-col m-2">
+        <div class="m-2 justify-center">
+          <label
+            for="username"
+            class="leading-6 block text-sm font-medium to-gray-900">
+            Username
+          </label>
         </div>
 
+        <div class="m-2">
+          <input
+          type="text"
+          name="username"
+          [(ngModel)]="username"
+          required
+          class="p-2 bg-slate-200 border-0 w-full rounded-md ring-inset sm:leading-6 shadow-sm">
+        </div>
 
+      </div>
 
-      </form>
+      <div class="flex flex-col m-2">
 
-      <button
-          (click)="buttonOnClick()"
-          class="text-center shadow-lg justify-center text-gray-600 bg-white font-medium rounded-lg text-sm px-5 py-2.5 m-10 hover:bg-slate-400">
+        <div class="m-2">
+          <label
+            for="password"
+            class="leading-6 block text-sm font-medium to-gray-900">
+            Password
+          </label>
+        </div>
+
+        <div class="m-2">
+          <input
+              type="password"
+              id="password"
+              name="password"
+              [(ngModel)]="password"
+              required
+              class="p-2 bg-slate-200 border-0 w-full rounded-md ring-inset sm:leading-6 shadow-sm">
+        </div>
+
+      </div>
+
+      <div class="items-center justify-center flex flex-initial m-2">
+        <button
+          (click)="buttonSubmit()"
+          class="items-center text-center shadow-lg text-gray-600 bg-slate-200 font-medium rounded-lg text-sm p-4 hover:bg-slate-400">
           Submit
         </button>
+      </div>
 
     </div>
 
-</div>
+  </form>
 
-<!-- <router-outlet></router-outlet> -->
+    <div class="flex justify-center">
+      <p *ngIf="showText"
+      class="items-center">{{username}} {{password}}</p>
+    </div>
+

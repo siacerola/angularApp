@@ -9,12 +9,19 @@ export class AppComponent {
   title = 'angularApp';
   showText = false
   username = ""
+  password=""
 
 
   buttonOnClick() {
     console.log("tombol di klik");
     this.showText = !this.showText
     console.log(this.showText);
-    console.log(this.username);
+  }
+
+  buttonSubmit() {
+    this.showText = !this.showText
+    console.log(this.showText);
+
+    console.log(`${this.username} ${this.password}`);
   }
 }
