@@ -7,11 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularApp';
-
-  // buttonOnClick() {
-  //   console.log("tombol di klik");
-  //   this.showText = !this.showText
-  //   console.log(this.showText);
-  // }
 }
 

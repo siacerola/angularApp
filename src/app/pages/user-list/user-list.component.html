@@ -33,25 +33,6 @@
 
 </form>
 
-  <div class="relative overflow-x-auto shadow-lg sm:rounded-md m-8 justify-center">
-    <table class="w-full text-sm text-left text-slate-700">
-      <thead class="text-xs uppercase bg-blue-600 text-slate-100">
-        <tr>
-          <th scope="col" class="px-6 py-3">Index</th>
-          <th scope="col" class="px-6 py-3">Username</th>
-          <th scope="col" class="px-6 py-3">Address</th>
-          <th scope="col" class="px-6 py-3">Contact</th>
-          <th scope="col" class="px-6 py-3">Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let user of userList" class="border-b bg-white hover:bg-slate-100">
-          <td class="px-6 py-3">{{user.id}}</td>
-          <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">{{user.name}}</th>
-          <td class="px-6 py-3">{{user.address}}</td>
-          <td class="px-6 py-3">{{user.phoneNumber}}</td>
-          <td class="px-6 py-3">{{user.email}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<app-user-list-item>
+  [userList]="userList"
+</app-user-list-item>
