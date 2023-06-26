@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserListComponent } from './pages/user-list/user-list.component';
 import { LoginComponent } from './pages/login/login.component';
-import { UserListItemComponent } from './pages/user-list-item/user-list-item.component';
+import { UserListItemComponent } from './pages/user-list/user-list-item/user-list-item.component';
+import { UserListFormComponent } from './pages/user-list/user-list-form/user-list-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     LoginComponent,
-    UserListItemComponent
+    UserListItemComponent,
+    UserListFormComponent
   ],
   imports: [
     BrowserModule,
