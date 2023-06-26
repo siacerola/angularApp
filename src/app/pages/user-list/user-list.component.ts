@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserModel } from '../../model/user.model';
 
 @Component({
@@ -7,14 +6,8 @@ import { UserModel } from '../../model/user.model';
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css']
 })
+
 export class UserListComponent {
-  userForm = new FormGroup({
-    id:new FormControl('',[Validators.required]),
-    name:new FormControl('',[Validators.required]),
-    address: new FormControl('', [Validators.required]),
-    phoneNumber:new FormControl('',[Validators.required]),
-    email:new FormControl('',[Validators.required])
-  })
 
   userBudi: UserModel = new UserModel({
     id: 1,
@@ -46,15 +39,16 @@ export class UserListComponent {
     this.userAsep
   ]
 
-  buttonSubmitForm() {
+  buttonSubmitForm(input:any) {
     let doc = new UserModel({
-      id: this.userForm.value.id,
-      name:this.userForm.value.name,
-      address:this.userForm.value.address,
-      phoneNumber:this.userForm.value.phoneNumber,
-      email:this.userForm.value.email
+      id: input.id,
+      name:input.name,
+      address:input.address,
+      phoneNumber:input.phoneNumber,
+      email:input.email
     })
 
     this.userList.push(doc)
   }
+
 }

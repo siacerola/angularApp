@@ -1,4 +1,4 @@
-<form [formGroup]="userForm" action="#" method="post" class="space-y-4">
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="space-y-4">
 
   <div class="justify-center flex flex-col items-center">
     <div>
@@ -27,7 +27,11 @@
     </div>
 
     <div class="items-center justify-center flex flex-initial m-2">
-      <button (click)="buttonSubmitForm()" class="items-center text-center shadow-lg text-gray-600 bg-slate-200 font-medium rounded-lg text-sm p-4 hover:bg-slate-400">Submit</button>
+      <button
+        type="submit"
+        class="items-center text-center shadow-lg text-gray-600 bg-slate-200 font-medium rounded-lg text-sm p-4 hover:bg-slate-400">
+        Submit
+      </button>
     </div>
   </div>
 
